@@ -29,15 +29,15 @@ class _CNodeAppState extends State<CNodeApp> {
     return MaterialApp(
       title: "CNode",
       debugShowCheckedModeBanner: false,
-      theme: isDarkTheme ? ThemeData.dark() : ThemeData.light(),
-      home: AppHome(),
+      theme: ThemeData.dark(),
+      home: new AppHome(),
       initialRoute: '/',
       routes: {
-        '/new_topic': (context) => AppNewTopic(),
-        '/topic_collects': (context) => AppTopicCollects(),
-        '/topic_detail': (context) => AppTopicDetail(),
-        '/topic_edit': (context) => AppTopicEdit(),
-        '/user_info': (context) => AppUserInfo(),
+        '/new_topic': (context) => new AppNewTopic(),
+        '/topic_collects': (context) => new AppTopicCollects(),
+        '/topic_detail': (context) => new AppTopicDetail(),
+        '/topic_edit': (context) => new AppTopicEdit(),
+        '/user_info': (context) => new AppUserInfo(),
       },
     );
   }

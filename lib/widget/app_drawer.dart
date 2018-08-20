@@ -22,17 +22,11 @@ class AppDrawer extends StatelessWidget {
           new ListTile(
             leading: Icon(
               Icons.home,
-              color: Theme
-                  .of(context)
-                  .primaryColor,
             ),
             selected: true,
             title: new Text(
               "首页",
               style: new TextStyle(
-                color: Theme
-                    .of(context)
-                    .primaryColor,
                 fontSize: 16.0,
               ),
             ),
@@ -40,15 +34,14 @@ class AppDrawer extends StatelessWidget {
           new ListTile(
             leading: Icon(
               Icons.collections_bookmark,
-              color: Colors.black87,
             ),
             title: new Text(
               "我的收藏",
-              style: new TextStyle(color: Colors.black87, fontSize: 16.0),
+              style: new TextStyle(fontSize: 16.0),
             ),
             trailing: Text(
               '12',
-              style: TextStyle(color: Colors.black87),
+              style: TextStyle(),
             ),
             onTap: () {
               Navigator.of(context).pushNamed('/topic_collects');
@@ -57,15 +50,13 @@ class AppDrawer extends StatelessWidget {
           new ListTile(
             leading: Icon(
               Icons.message,
-              color: Colors.black87,
             ),
             title: new Text(
               "未读消息",
-              style: new TextStyle(color: Colors.black87, fontSize: 16.0),
             ),
             trailing: Text(
               '90',
-              style: TextStyle(color: Colors.black87),
+              style: TextStyle(),
             ),
           ),
 //            new SwitchListTile(
@@ -77,12 +68,12 @@ class AppDrawer extends StatelessWidget {
 //              activeColor: Theme.of(context).backgroundColor,
 //              onChanged: (bool value) {},
 //            ),
-          new ListTile(
-            title: new Text(
-              "退出登录",
-              style: new TextStyle(color: Colors.white, fontSize: 16.0),
-            ),
-          )
+//          new ListTile(
+//            title: new Text(
+//              "退出登录",
+//              style: new TextStyle(color: Colors.white, fontSize: 16.0),
+//            ),
+//          )
         ],
       ),
     );
